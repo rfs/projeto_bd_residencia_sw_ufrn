@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"  
+    version="2.0">  
+     
+    <managed-bean>
+        <managed-bean-name>EspecialidadeBean</managed-bean-name>
+        <managed-bean-class>controle.EspecialidadeBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <navigation-rule>
+        <from-view-id>/*</from-view-id>
+        <navigation-case>
+            <from-outcome>listaEspecialidade</from-outcome>
+            <to-view-id>/listaEspecialidade.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>cadEspecialidade</from-outcome>
+            <to-view-id>/cadEspecialidade.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>listaMedicos</from-outcome>
+            <to-view-id>/listaMedico.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>cadMedico</from-outcome>
+            <to-view-id>/cadMedico.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <managed-bean>
+        <managed-bean-name>MedicoBean</managed-bean-name>
+        <managed-bean-class>controle.MedicoBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+</faces-config>
